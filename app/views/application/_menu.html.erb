@@ -1,0 +1,41 @@
+<!--menu-->
+
+		
+				<ul class="nav nav-sidebar">
+					<li >
+						<%= link_to 'Eventos', 'http://localhost:3000/' %>
+					</li>
+					<li>
+						<%= link_to 'Classificados', 'http://localhost:3000/anuncios' %>
+					</li>
+					<li>
+						<%= link_to 'Ocorrência', 'http://localhost:3000/ocorrencia' %>
+					</li>
+					<li>
+						<%= link_to 'Condôminos', 'http://localhost:3000' %>
+					</li>
+					<li>
+						<%= link_to 'Documentos', 'http://localhost:3000/' %>
+					</li>
+					<li>
+						<%= link_to 'Enquetes', 'http://localhost:3000/' %>
+					</li>
+					<li>
+						<%= link_to 'Fotos', 'http://localhost:3000/' %>
+					</li>
+					<li>
+						<%= link_to 'Administração', 'http://localhost:3000/' %>
+					</li>
+					<li>
+						<a href="javascript:;" data-toggle="collapse" data-target="#d"><i class="fa fa-fw fa-arrows-v"></i> Contas <i class="fa fa-fw fa-caret-down"></i></a>
+						<ul id="d" class="collapse">
+							<li>
+								<%= link_to 'Novo Lançamento', new_lancamento_contabil_path %> 
+							</li>
+							<li>
+								<%= link_to 'Lançamentos', lancamentos_contabeis_path %>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			

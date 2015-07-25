@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html"; charset="utf-8" http-equiv="Content-Type" />
+	</head>
+	<body>
+		<h1>Bem vindo ao nosso sistema <%= @user.nome %></h1>
+		<p>
+			Você foi cadastrado com sucesso!
+			Seu usuário: <%= @user.email %>.<br>
+			Sua senha: <%= @user.senha %>.<br>
+		</p>
+		<p>
+			Para ir para seu perfil, clique no link abaixo: <br>
+			<a href="<%= @url %>">perfil do usuario</a>.
+		</p>
+		<p>Obrigado por fazer parte do nosso grupo!</p>
+	</body>
+</html>

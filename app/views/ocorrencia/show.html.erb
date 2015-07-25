@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @ocorrencium.titulo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @ocorrencium.data %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @ocorrencium.local %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @ocorrencium.descricao %>
+</p>
+
+<p>
+  <strong>Arquivo:</strong>
+  <%= @ocorrencium.arquivo %>
+</p>
+
+<p>
+  <strong>Envolvidos:</strong>
+  <%= @ocorrencium.envolvidos %>
+</p>
+
+<%= link_to 'Edit', edit_ocorrencium_path(@ocorrencium) %> |
+<%= link_to 'Back', ocorrencia_path %>

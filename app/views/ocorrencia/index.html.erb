@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ocorrencias</h1>
+
+<table>
+  
+  <tbody>
+    <% @ocorrencia.each do |ocorrencium| %>
+      <tr>
+        <td><%= ocorrencium.titulo %></td>
+        <td><%= ocorrencium.data %></td>
+        <td><%= ocorrencium.local %></td>
+        <td><%= ocorrencium.descricao %></td>
+        <td><%= ocorrencium.arquivo %></td>
+        <td><%= ocorrencium.envolvidos %></td>
+        <td><%= link_to 'Show', ocorrencium %><br />
+        	<%= link_to 'Edit', edit_ocorrencium_path(ocorrencium) %><br />
+        	<%= link_to 'Destroy', ocorrencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Ocorrencia', new_ocorrencium_path %>

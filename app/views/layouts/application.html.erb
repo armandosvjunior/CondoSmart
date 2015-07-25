@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CondoSmart</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<meta name="autor" content="No PDS-Ltda." />
+		<meta name="KEYBOARDS" content="gerência, administação,condomínio, edifício" />
+		<meta name="description"  content="Gerência de condomínio"/>
+		<%= favicon_link_tag(source='CondoSmartIcon.png')%>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<!-- Add bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Add bootstrap  JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<!--menu-->
+
+		<nav class="navbar navbar-fixed-top" >
+
+			<div class="navbar-header">
+				<%= link_to image_tag("CondoSmartFinal.png"), new_usuario_session_path  %>
+			</div>
+
+			<div class="navbar-right">
+				<p>
+					<% if current_usuario.present? %>
+					<%= current_usuario.email %>
+					<%= link_to "Sair", destroy_usuario_session_path, :method => :delete %>
+					<%= link_to "Perfil", edit_usuario_registration_path %>
+					<% else %>
+					<%= link_to "Entrar", new_usuario_session_path %>
+					<% end %>
+				</p>
+			</div>
+		</nav>
+
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<!--menu-->
+
+				<div class= "menu">
+					<% if current_usuario.present? %>
+					<%= render 'menu' %>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="col-sm-3 col-md-2 sidebar">
+				<div class="container">
+					<!--centraliza-->
+					<section class="principal">
+						<%= yield %> <!--conteudo dinamico-->
+					</section>
+				</div>
+			</div>
+			<footer>
+
+				<p>
+					<strong>&copy;2015 - No PDS Ltda.</strong>
+				</p>
+			</footer>
+	</body>
+</html>
