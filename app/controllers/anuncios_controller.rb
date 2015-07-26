@@ -61,6 +61,17 @@ class AnunciosController < ApplicationController
     end
   end
 
+def upload
+  path = File.join(Rails.root, 
+  "assets/images", 
+  params[:usuario][:anexo].original_filename)
+
+# escreve o arquivo no local designado
+File.open(path, "") do |f| 
+  f.write(params[:usuario][:anexo].read)
+end
+end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_anuncio

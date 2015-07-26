@@ -7,7 +7,7 @@
 	<% @anuncios.each do |anuncio| %>
 	<div class="col-sm-3 col-md-2 sidebar">
 		<div class="<%= cycle('list_line_odd', 'list_line_even') %>">
-			<!--<p class="foto" ><%= image_tag(anuncio.anexo, class: 'list_image') %><%=  %></p>-->
+			<p class="foto" ><%= image_tag(anuncio.anexo, class: 'foto') %></p>
 			<p>
 				<%= anuncio.tipo %>) <%= anuncio.titulo %>
 			</p>

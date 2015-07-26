@@ -8,7 +8,7 @@ class Usuarios::RegistrationsController < Devise::RegistrationsController
      @usuario = Usuario.new
    end
 
-  # POST /resource
+  # POST /resource -> não tá funcionando
    def create
      super
       @usuario = Usuario.new(usuario_params)
